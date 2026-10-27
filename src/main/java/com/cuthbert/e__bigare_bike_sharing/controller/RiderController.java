@@ -66,4 +66,13 @@ public class RiderController {
 
         return new ResponseEntity<>(response,HttpStatus.OK);
     }
+
+
+    // B1. Find riders by lastName
+    @GetMapping("/by-last-name")
+    public ResponseEntity<List<Rider>>getByLastName(@RequestParam String lastName){
+        List<Rider> riders=riderService.getRidersByLastName(lastName);
+
+        return new ResponseEntity<>(riders,HttpStatus.OK);
+    }
 }

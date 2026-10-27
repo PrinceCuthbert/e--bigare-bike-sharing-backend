@@ -1,10 +1,12 @@
 package com.cuthbert.e__bigare_bike_sharing.service;
 
 import com.cuthbert.e__bigare_bike_sharing.model.Ride;
+import com.cuthbert.e__bigare_bike_sharing.model.RideStatus;
 import com.cuthbert.e__bigare_bike_sharing.repository.RideRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -58,6 +60,16 @@ public class RideService {
 
         rideRepository.delete(ride.get());
         return "Ride deleted successfully";
+    }
+
+    // B2.Rides by status
+    public List<Ride> getRidesByStatus(RideStatus status){
+        return rideRepository.findByStatusOrderByRideDateAsc(status);
+    }
+
+    // B3. Rides in a date range
+    public List<Ride> getRidesBetweenDates(LocalDate start,LocalDate end){
+        return rideRepository.findByRideDateBetweenOrderByRideDateAsc(start,end);
     }
 
 

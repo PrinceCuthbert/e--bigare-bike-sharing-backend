@@ -20,7 +20,7 @@ public class Ride {
 
     private String destination;
 
-    private int durationMinutes;
+    private Integer durationMinutes;
 
     @ManyToOne
     @JoinColumn(name = "rider_id")
@@ -65,11 +65,11 @@ public class Ride {
         this.destination = destination;
     }
 
-    public int getDurationMinutes() {
+    public Integer getDurationMinutes() {
         return durationMinutes;
     }
 
-    public void setDurationMinutes(int durationMinutes) {
+    public void setDurationMinutes(Integer durationMinutes) {
         this.durationMinutes = durationMinutes;
     }
 

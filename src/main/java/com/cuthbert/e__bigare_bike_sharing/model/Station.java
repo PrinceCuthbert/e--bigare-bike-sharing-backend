@@ -12,7 +12,7 @@ public class Station {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    private int stationNumber;
+    private Integer stationNumber;
 
     private String name;
 
@@ -32,11 +32,11 @@ public class Station {
         this.id = id;
     }
 
-    public int getStationNumber() {
+    public Integer getStationNumber() {
         return stationNumber;
     }
 
-    public void setStationNumber(int stationNumber) {
+    public void setStationNumber(Integer stationNumber) {
         this.stationNumber = stationNumber;
     }
 

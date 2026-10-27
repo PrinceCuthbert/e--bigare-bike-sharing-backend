@@ -1,12 +1,14 @@
 package com.cuthbert.e__bigare_bike_sharing.controller;
 
 import com.cuthbert.e__bigare_bike_sharing.model.Ride;
+import com.cuthbert.e__bigare_bike_sharing.model.RideStatus;
 import com.cuthbert.e__bigare_bike_sharing.service.RideService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -58,6 +60,23 @@ public class RideController {
             return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
         }
         return new ResponseEntity<>(response,HttpStatus.OK);
+    }
+
+    // B2. Rides by status
+    @GetMapping("/by-status")
+    public ResponseEntity<List<Ride>> getByStatus(@RequestParam RideStatus status) {
+        List<Ride> rides = rideService.getRidesByStatus(status);
+        return new ResponseEntity<>(rides, HttpStatus.OK);
+    }
+
+    // B3. Rides in a date range
+    @GetMapping("/between")
+    public ResponseEntity<List<Ride>>getRidesBetween(@RequestParam String start,@RequestParam String end){
+        LocalDate startDate=LocalDate.parse(start);
+        LocalDate endDate=LocalDate.parse(end);
+
+        List<Ride> rides=rideService.getRidesBetweenDates(startDate,endDate);
+        return new ResponseEntity<>(rides,HttpStatus.OK);
     }
 
 

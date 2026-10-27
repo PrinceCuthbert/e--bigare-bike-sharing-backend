@@ -1,0 +1,455 @@
+{
+  "info": {
+    "_postman_id": "1879fba4-9993-4f10-9673-26c4dd4c37e6",
+    "name": "e--bigare-bike-sharing-midterm",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "47882661",
+    "_collection_link": "https://go.postman.co/collection/47882661-1879fba4-9993-4f10-9673-26c4dd4c37e6?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Seed Data",
+      "item": [
+        {
+          "name": "Seed BikeTypes",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\": \"Mountain Bike\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/bike-types/save",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "bike-types",
+                "save"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Seed Stations",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"stationNumber\": 4, \"name\": \"Nyamirambo\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/stations/save",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "stations",
+                "save"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Seed Steward 1 at station 1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"firstName\": \"Eric\",\r\n  \"lastName\": \"Mugisha\",\r\n  \"phone\": \"0788111111\",\r\n  \"station\": {\r\n    \"id\": \"27c48b0a-ffa4-4ee0-9994-28f72b328f99\"\r\n  },\r\n  \"bikeTypes\": [\r\n    {\r\n      \"id\": \"65b5d258-1c12-4d5a-9c04-7fecd7c45b29\"\r\n    },\r\n    {\r\n      \"id\": \"fe0eacab-bb80-4608-8632-72a9d6837606\"\r\n    }\r\n  ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/stewards/save",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "stewards",
+                "save"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Steward 3 (Assigned to Station 3, no bike types)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"firstName\": \"Patrick\",\r\n  \"lastName\": \"Gasana\",\r\n  \"phone\": \"0788333333\",\r\n  \"station\": {\r\n    \"id\": \"e36edc54-cb54-4d7f-ba1b-a56d33991692\"\r\n  },\r\n  \"bikeTypes\": []\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/stewards/save",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "stewards",
+                "save"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Steward 2 (Assigned to Station 2)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"firstName\": \"Jean\",\r\n  \"lastName\": \"Hakizimana\",\r\n  \"phone\": \"0788222222\",\r\n  \"station\": {\r\n    \"id\": \"474a1384-1994-4e62-9ee4-f72a113c1159\"\r\n  },\r\n  \"bikeTypes\": [\r\n    { \"id\": \"783d6aaf-f3f9-4c31-87cd-17c8cdec24cb\" }\r\n  ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/stewards/save",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "stewards",
+                "save"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Seed Riders",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"firstName\": \"Fabrice\",\r\n  \"lastName\": \"Kamanzi\",\r\n  \"riderCode\": \"RD-0886\",\r\n  \"phone\": \"0788444445\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/riders/save",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "riders",
+                "save"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Seed the 10 Rides",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"rideDate\": \"2026-11-15\",\r\n  \"status\": \"ABORTED\",\r\n  \"destination\": \"Nyamirambo\",\r\n  \"durationMinutes\": 10,\r\n  \"rider\": { \"id\": \"8e997e5f-47b0-4575-8e84-d45883a3dfee\" },\r\n  \"steward\": { \"id\": \"8d722ce4-442d-44ee-b3c5-4f420b77a5da\" }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/rides/save",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "rides",
+                "save"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "PART B",
+      "item": [
+        {
+          "name": "B1: Find riders by lastName",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/riders/by-last-name?lastName=ishimwe",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "riders",
+                "by-last-name"
+              ],
+              "query": [
+                {
+                  "key": "lastName",
+                  "value": "ishimwe"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "B1: Find riders by lastName",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/riders/by-last-name?lastName=ishimwe",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "riders",
+                    "by-last-name"
+                  ],
+                  "query": [
+                    {
+                      "key": "lastName",
+                      "value": "ishimwe"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 27 Oct 2026 22:19:24 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n  {\n    \"firstName\": \"Aline\",\n    \"id\": \"4591e6cc-325d-4153-b44c-ea3784096aaa\",\n    \"lastName\": \"Ishimwe\",\n    \"phone\": \"0788444442\",\n    \"riderCode\": \"RD-0883\"\n  },\n  {\n    \"firstName\": \"Prince\",\n    \"id\": \"8100c6b8-8883-4fd9-8ecb-f0d7a07e0de0\",\n    \"lastName\": \"Ishimwe\",\n    \"phone\": \"0788444441\",\n    \"riderCode\": \"RD-0882\"\n  }\n]"
+            }
+          ]
+        },
+        {
+          "name": "B2: Rides by status",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/rides/by-status?status=RESERVED",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "rides",
+                "by-status"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "RESERVED"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "B2: Rides by status",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/rides/by-status?status=RESERVED",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "rides",
+                    "by-status"
+                  ],
+                  "query": [
+                    {
+                      "key": "status",
+                      "value": "RESERVED"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 27 Oct 2026 22:21:23 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n  {\n    \"destination\": \"Kacyiru\",\n    \"durationMinutes\": 20,\n    \"id\": \"51293daa-c29a-4976-ace8-08c554db1b3f\",\n    \"rideDate\": \"2026-10-26\",\n    \"rider\": {\n      \"firstName\": \"Aline\",\n      \"id\": \"4591e6cc-325d-4153-b44c-ea3784096aaa\",\n      \"lastName\": \"Ishimwe\",\n      \"phone\": \"0788444442\",\n      \"riderCode\": \"RD-0883\"\n    },\n    \"status\": \"RESERVED\",\n    \"steward\": {\n      \"bikeTypes\": [],\n      \"firstName\": \"Jean\",\n      \"id\": \"8d722ce4-442d-44ee-b3c5-4f420b77a5da\",\n      \"lastName\": \"Hakizimana\",\n      \"phone\": \"0788222222\",\n      \"station\": {\n        \"stationNumber\": 2,\n        \"name\": \"Downtown CHICK\",\n        \"id\": \"474a1384-1994-4e62-9ee4-f72a113c1159\"\n      }\n    }\n  },\n  {\n    \"destination\": \"CBD\",\n    \"durationMinutes\": 35,\n    \"id\": \"28aed811-af91-4d68-9412-f2fd6430e577\",\n    \"rideDate\": \"2026-11-05\",\n    \"rider\": {\n      \"firstName\": \"Fabrice\",\n      \"id\": \"468ef6a3-450f-4556-bc3b-dc2163254743\",\n      \"lastName\": \"Kamanzi\",\n      \"phone\": \"0788444445\",\n      \"riderCode\": \"RD-0886\"\n    },\n    \"status\": \"RESERVED\",\n    \"steward\": {\n      \"bikeTypes\": [],\n      \"firstName\": \"Jean\",\n      \"id\": \"8d722ce4-442d-44ee-b3c5-4f420b77a5da\",\n      \"lastName\": \"Hakizimana\",\n      \"phone\": \"0788222222\",\n      \"station\": {\n        \"stationNumber\": 2,\n        \"name\": \"Downtown CHICK\",\n        \"id\": \"474a1384-1994-4e62-9ee4-f72a113c1159\"\n      }\n    }\n  },\n  {\n    \"destination\": \"Gisozi\",\n    \"durationMinutes\": 15,\n    \"id\": \"007d2999-d328-4d9a-bf71-b4eae3e62422\",\n    \"rideDate\": \"2026-11-12\",\n    \"rider\": {\n      \"firstName\": \"Claude\",\n      \"id\": \"bd44662f-f011-4388-afcf-c0504835c201\",\n      \"lastName\": \"Murenzi\",\n      \"phone\": \"0788444443\",\n      \"riderCode\": \"RD-0884\"\n    },\n    \"status\": \"RESERVED\",\n    \"steward\": {\n      \"bikeTypes\": [\n        {\n          \"name\": \"City Bike\",\n          \"id\": \"65b5d258-1c12-4d5a-9c04-7fecd7c45b29\"\n        },\n        {\n          \"name\": \"Electric Bike\",\n          \"id\": \"fe0eacab-bb80-4608-8632-72a9d6837606\"\n        }\n      ],\n      \"firstName\": \"Eric\",\n      \"id\": \"713046bb-3a10-492a-bcfa-42d13cd49302\",\n      \"lastName\": \"Mugisha\",\n      \"phone\": \"0788111111\",\n      \"station\": {\n        \"stationNumber\": 1,\n        \"name\": \"Kigali Heights\",\n        \"id\": \"27c48b0a-ffa4-4ee0-9994-28f72b328f99\"\n      }\n    }\n  }\n]"
+            }
+          ]
+        },
+        {
+          "name": "B3: Rides in a date range",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/rides/between?start=2026-10-01&end=2026-10-31",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "rides",
+                "between"
+              ],
+              "query": [
+                {
+                  "key": "start",
+                  "value": "2026-10-01"
+                },
+                {
+                  "key": "end",
+                  "value": "2026-10-31"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

@@ -73,4 +73,9 @@ public class RiderService {
 
         return "Rider deleted successfully";
     }
+
+    // B1.Find riders by lastName
+    public List<Rider>getRidersByLastName(String lastName){
+        return riderRepository.findByLastNameIgnoreCaseOrderByFirstNameAsc(lastName);
+    }
 }
