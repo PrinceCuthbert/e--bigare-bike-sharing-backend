@@ -21,6 +21,9 @@ public class BikeTypeController {
     @PostMapping("/save")
     public ResponseEntity<String> save(@RequestBody BikeType bikeType){
         String message=bikeTypeService.saveBikeType(bikeType);
+        if("Bike type already exists".equals(message)){
+            return new ResponseEntity<>(message,HttpStatus.CONFLICT);
+        }
 
         return new ResponseEntity<>(message, HttpStatus.CREATED);
     }
@@ -44,6 +47,9 @@ public class BikeTypeController {
         String msg = bikeTypeService.updateBikeType(id, bikeType);
         if ("The bike type with that id does not exist".equals(msg)) {
             return new ResponseEntity<>(msg, HttpStatus.NOT_FOUND);
+        }
+        if("Bike type already exists".equals(msg)){
+            return new ResponseEntity<>(msg,HttpStatus.CONFLICT);
         }
         return new ResponseEntity<>(msg, HttpStatus.OK);
     }

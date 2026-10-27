@@ -16,6 +16,12 @@ public class RiderService {
     private RiderRepository riderRepository;
 
     public String saveRider(Rider rider){
+        if(riderRepository.existsByRiderCode(rider.getRiderCode())){
+            return "Rider code already exists";
+        }
+        if(rider.getPhone() != null && riderRepository.existsByPhone(rider.getPhone())){
+            return "Rider phone already exists";
+        }
         riderRepository.save(rider);
 
         return "Rider saved successfully";
@@ -36,6 +42,16 @@ public class RiderService {
             return "The rider with that id does not exist";
         }
         Rider existingRider=riderExists.get();
+
+        if (!existingRider.getRiderCode().equals(updatedRider.getRiderCode()) &&
+                riderRepository.existsByRiderCode(updatedRider.getRiderCode())) {
+            return "Rider code already exists";
+        }
+        if (updatedRider.getPhone() != null &&
+                !updatedRider.getPhone().equals(existingRider.getPhone()) &&
+                riderRepository.existsByPhone(updatedRider.getPhone())) {
+            return "Rider phone already exists";
+        }
 
         existingRider.setFirstName(updatedRider.getFirstName());
         existingRider.setLastName(updatedRider.getLastName());

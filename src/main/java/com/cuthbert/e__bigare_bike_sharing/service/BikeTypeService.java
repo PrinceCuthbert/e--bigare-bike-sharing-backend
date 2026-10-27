@@ -16,8 +16,10 @@ public class BikeTypeService {
     private BikeTypeRepository bikeTypeRepository;
 
     public String saveBikeType(BikeType bikeType){
+        if(bikeType.getName() !=null && bikeTypeRepository.existsByNameIgnoreCase(bikeType.getName().trim())){
+            return "Bike type already exists";
+        }
         bikeTypeRepository.save(bikeType);
-
         return "Bike type saved successfully";
     }
 

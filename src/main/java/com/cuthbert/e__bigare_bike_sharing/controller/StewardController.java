@@ -21,6 +21,9 @@ public class StewardController {
     @PostMapping("/save")
     public ResponseEntity<String> save(@RequestBody Steward steward){
         String response=stewardService.saveSteward(steward);
+        if ("Steward phone already exists".equals(response)) {
+            return new ResponseEntity<>(response, HttpStatus.CONFLICT);
+        }
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 
@@ -46,6 +49,9 @@ public class StewardController {
 
         if ("The steward with that id does not exist".equals(message)) {
             return new ResponseEntity<>(message, HttpStatus.NOT_FOUND);
+        }
+        if ("Steward phone already exists".equals(message)){
+            return new ResponseEntity<>(message,HttpStatus.CONFLICT);
         }
         return new ResponseEntity<>(message,HttpStatus.OK);
     }

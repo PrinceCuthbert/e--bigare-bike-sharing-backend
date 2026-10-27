@@ -16,6 +16,9 @@ public class StationService {
     private StationRepository stationRepository;
 
     public String saveStation(Station station){
+        if (stationRepository.existsByStationNumber(station.getStationNumber())) {
+            return "Station number already exists";
+        }
         stationRepository.save(station);
         return "Station saved successfully";
     }
@@ -36,6 +39,10 @@ public class StationService {
         }
 
         Station exists=station.get();
+        if (exists.getStationNumber() != updatedStation.getStationNumber() &&
+                stationRepository.existsByStationNumber(updatedStation.getStationNumber())) {
+            return "Station number already exists";
+        }
         exists.setStationNumber(updatedStation.getStationNumber());
         exists.setName(updatedStation.getName());
         stationRepository.save(exists);

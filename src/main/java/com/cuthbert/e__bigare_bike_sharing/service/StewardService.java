@@ -16,6 +16,9 @@ public class StewardService {
     private StewardRepository stewardRepository;
 
     public String saveSteward(Steward steward){
+        if (steward.getPhone() != null && stewardRepository.existsByPhone(steward.getPhone())) {
+            return "Steward phone already exists";
+        }
         stewardRepository.save(steward);
 
         return "Steward saved successfully";
@@ -37,6 +40,12 @@ public class StewardService {
         }
 
         Steward exists=steward.get();
+
+        if (updatedSteward.getPhone() != null &&
+                !updatedSteward.getPhone().equals(exists.getPhone()) &&
+                stewardRepository.existsByPhone(updatedSteward.getPhone())) {
+            return "Steward phone already exists";
+        }
 
         exists.setFirstName(updatedSteward.getFirstName());
         exists.setLastName(updatedSteward.getLastName());

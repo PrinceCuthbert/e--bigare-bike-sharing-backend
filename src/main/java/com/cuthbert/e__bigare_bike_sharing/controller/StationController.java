@@ -21,6 +21,9 @@ public class StationController {
     @PostMapping("/save")
     public ResponseEntity<String> save(@RequestBody Station station){
         String response=stationService.saveStation(station);
+        if("Station number already exists".equals(response)){
+            return new ResponseEntity<>(response,HttpStatus.CONFLICT);
+        }
 
         return  new ResponseEntity<>(response, HttpStatus.CREATED);
     }
@@ -44,6 +47,9 @@ public class StationController {
         String resp = stationService.updateStation(id, station);
         if ("The station with that id does not exist".equals(resp)) {
             return new ResponseEntity<>(resp, HttpStatus.NOT_FOUND);
+        }
+        if("Station number already exists".equals(resp)){
+            return new ResponseEntity<>(resp,HttpStatus.CONFLICT);
         }
         return new ResponseEntity<>(resp, HttpStatus.OK);
     }

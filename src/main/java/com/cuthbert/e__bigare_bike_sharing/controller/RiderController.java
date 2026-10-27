@@ -21,6 +21,9 @@ public class RiderController {
     @PostMapping("/save")
     public ResponseEntity<String> save(@RequestBody Rider rider){
         String response=riderService.saveRider(rider);
+        if("Rider code already exists".equals(response) || "Rider phone already exists".equals(response) ){
+            return new ResponseEntity<>(response,HttpStatus.CONFLICT);
+        }
 
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
@@ -46,6 +49,9 @@ public class RiderController {
 
         if ("The rider with that id does not exist".equals(message)) {
             return new ResponseEntity<>(message, HttpStatus.NOT_FOUND);
+        }
+        if ("Rider code already exists".equals(message) || "Rider phone already exists".equals(message)) {
+            return new ResponseEntity<>(message, HttpStatus.CONFLICT);
         }
         return new ResponseEntity<>(message, HttpStatus.OK);
     }
