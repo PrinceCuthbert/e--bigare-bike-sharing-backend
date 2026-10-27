@@ -6,4 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.UUID;
 
 public interface StewardRepository extends JpaRepository<Steward, UUID> {
+    boolean existsByPhone(String phone);
 }

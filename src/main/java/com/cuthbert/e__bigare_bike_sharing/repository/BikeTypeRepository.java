@@ -6,4 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.UUID;
 
 public interface BikeTypeRepository extends JpaRepository<BikeType, UUID> {
+        boolean existsByNameIgnoreCase(String name);
 }
