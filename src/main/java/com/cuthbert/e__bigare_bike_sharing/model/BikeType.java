@@ -29,8 +29,16 @@ public class BikeType {
         this.name = name;
     }
 
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
     public UUID getId() {
         return id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getName() {

@@ -21,7 +21,7 @@ public class Steward {
     private String phone;
 
     @ManyToOne
-    @JoinColumn(name="station_id",nullable = false)
+    @JoinColumn(name="station_id",nullable = true)
     private Station station;
 
     @ManyToMany
