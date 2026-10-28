@@ -1,7 +1,9 @@
 package com.cuthbert.e__bigare_bike_sharing.service;
 
 import com.cuthbert.e__bigare_bike_sharing.model.Rider;
+import com.cuthbert.e__bigare_bike_sharing.model.Steward;
 import com.cuthbert.e__bigare_bike_sharing.repository.RiderRepository;
+import com.cuthbert.e__bigare_bike_sharing.repository.StewardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +16,9 @@ public class RiderService {
 
     @Autowired
     private RiderRepository riderRepository;
+
+    @Autowired
+    private StewardRepository stewardRepository;
 
     public String saveRider(Rider rider){
         if(riderRepository.existsByRiderCode(rider.getRiderCode())){
@@ -77,5 +82,17 @@ public class RiderService {
     // B1.Find riders by lastName
     public List<Rider>getRidersByLastName(String lastName){
         return riderRepository.findByLastNameIgnoreCaseOrderByFirstNameAsc(lastName);
+    }
+
+    // C4. Get Riders associated with a certain steward
+    public Optional<List<Rider>> getRidersOfSteward(UUID stewardId){
+
+        // Hano we used Optiona,empty instead of null cz we can have to return 2 types of distinguished response
+        // either Not Found(steward id is not found) or Found but Empty(to mean there is no riders associated to that steward, niyo mpamvu, here I used Optional.empty();
+        // So If your service simply returned List<Rider>, the controller would receive an empty list [] in both cases and could not tell whether to return 404 or 200.
+        if(!stewardRepository.existsById(stewardId)){
+            return Optional.empty();
+        }
+        return  Optional.of(riderRepository.findRidersByStewardId(stewardId));
     }
 }

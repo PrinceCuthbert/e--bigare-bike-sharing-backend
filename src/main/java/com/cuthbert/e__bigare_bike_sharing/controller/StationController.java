@@ -64,4 +64,10 @@ public class StationController {
         }
         return new ResponseEntity<>(responseMessage,HttpStatus.OK);
     }
+
+    // C2: Get Free stations( nukuvuga stations without umu steward)
+    @GetMapping("/free")
+    public ResponseEntity<List<Station>> getFreeStations(){
+        return  new ResponseEntity<>(stationService.getFreeStations(),HttpStatus.OK);
+    }
 }

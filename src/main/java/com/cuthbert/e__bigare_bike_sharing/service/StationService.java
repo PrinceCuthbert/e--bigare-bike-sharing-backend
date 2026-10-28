@@ -59,4 +59,10 @@ public class StationService {
         stationRepository.delete(stationToDelete.get());
         return "Station deleted successfully";
     }
+
+
+    // C2: Ndi kwandika service for free stations nukuvuga stations without stewards
+    public List<Station>getFreeStations(){
+        return stationRepository.findFreeStations();
+    }
 }

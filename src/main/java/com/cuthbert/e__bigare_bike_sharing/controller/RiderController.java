@@ -75,4 +75,15 @@ public class RiderController {
 
         return new ResponseEntity<>(riders,HttpStatus.OK);
     }
+
+    // C4: Riders of a stewards (nukuvuga all riders associated with a certain steward)
+    @GetMapping("/of-steward/{stewardId}")
+    public ResponseEntity<?> getRidersOfSteward(@PathVariable UUID stewardId){
+        Optional<List<Rider>> riders=riderService.getRidersOfSteward(stewardId);
+
+        if(riders.isEmpty()){
+            return new ResponseEntity<>("The steward with that id does not exist",HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<>(riders.get(),HttpStatus.OK);
+    }
 }

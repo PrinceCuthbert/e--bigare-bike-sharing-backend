@@ -53,5 +53,10 @@ public class BikeTypeService {
         return "Bike type deleted successfully";
     }
 
+    // from C3: I'm writing a service to get bike types that no body holds
+    public List<BikeType> getUnusedBikeTypes(){
+        return bikeTypeRepository.findUnusedBikeTypes();
+    }
+
 
 }

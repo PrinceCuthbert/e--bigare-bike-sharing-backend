@@ -62,4 +62,10 @@ public class BikeTypeController {
         }
         return new ResponseEntity<>(msg, HttpStatus.OK);
     }
+
+    // C3: Hano I want to get the Bike types no body holds, to mean no one has used that type of bike
+    @GetMapping("/unused")
+    public ResponseEntity<List<BikeType>> getUnused(){
+        return new ResponseEntity<>(bikeTypeService.getUnusedBikeTypes(),HttpStatus.OK);
+    }
 }

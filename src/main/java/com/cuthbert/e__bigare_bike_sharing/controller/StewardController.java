@@ -64,4 +64,11 @@ public class StewardController {
         }
         return new ResponseEntity<>(response,HttpStatus.OK);
     }
+
+
+    // C1: Stewards by bike type
+    @GetMapping("/by-bike-type")
+    public ResponseEntity<List<Steward>> getByBikeType(@RequestParam String name){
+        return  new ResponseEntity<>(stewardService.getStewardsByBikeType(name),HttpStatus.OK);
+    }
 }

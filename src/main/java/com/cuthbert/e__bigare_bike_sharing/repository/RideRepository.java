@@ -13,7 +13,8 @@ public interface RideRepository extends JpaRepository<Ride, UUID> {
     // B2: Rides by status, earliest rideDate first
     List<Ride>findByStatusOrderByRideDateAsc(RideStatus status);
 
-    // B3: Rides in a date range (inclusive), ordered by rideDate Ascending
+    // B3: Rides in a date range (inclusive), ordered by rideDate Ascending, so hano the key take away is that this JPQL is equivalent to
+    // select * from ride where ride_date between 'start' AND 'end' ORDER BY ride_date ASC; eg: select * from ride where ride_date between '2026-10-01' AND '2026-10-31' ORDER BY ride_date ASC;
     List<Ride> findByRideDateBetweenOrderByRideDateAsc(LocalDate start,LocalDate end);
 
 }

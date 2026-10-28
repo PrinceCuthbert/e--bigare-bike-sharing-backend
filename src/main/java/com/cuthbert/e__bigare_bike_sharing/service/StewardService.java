@@ -111,4 +111,10 @@ public class StewardService {
         return "Steward deleted successfully";
     }
 
+
+    // Here is a C1: service for stewards by bike type
+    public List<Steward> getStewardsByBikeType(String name){
+        return stewardRepository.findStewardByBikeTypeName(name);
+    }
+
 }
