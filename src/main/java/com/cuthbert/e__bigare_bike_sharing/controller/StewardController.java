@@ -71,4 +71,33 @@ public class StewardController {
     public ResponseEntity<List<Steward>> getByBikeType(@RequestParam String name){
         return  new ResponseEntity<>(stewardService.getStewardsByBikeType(name),HttpStatus.OK);
     }
+
+    // D3: PUT /api/stewards/{stewardId}/bike-types/{bikeTypeId}
+
+    @PutMapping("/{stewardId}/bike-types/{bikeTypeId}")
+    public ResponseEntity<String> addBikeType(@PathVariable UUID stewardId,@PathVariable UUID bikeTypeId){
+        String message=stewardService.addBikeTypeToSteward(stewardId,bikeTypeId);
+        if ("The steward with that id does not exist".equals(message) || "That bike type does not exist".equals(message)) {
+            return new ResponseEntity<>(message, HttpStatus.NOT_FOUND);
+        }
+        if ("The steward already has that bike type".equals(message)) {
+            return new ResponseEntity<>(message, HttpStatus.CONFLICT);
+        }
+        return new ResponseEntity<>(message,HttpStatus.OK);
+
+    }
+
+    // D4: PATCH /api/stewards/{stewardId}/station?stationNumber=4
+    @PatchMapping("/{stewardId}/station")
+    public ResponseEntity<String> moveStation(@PathVariable UUID stewardId, @RequestParam int stationNumber) {
+     String message=stewardService.moveStewardToStation(stewardId,stationNumber);
+     if("The steward with that id does not exist".equals(message) || "The station with that stationNumber does not exist".equals(message)){
+         return new ResponseEntity<>(message,HttpStatus.NOT_FOUND);
+     }
+     if("That station is taken by another steward".equals(message)){
+         return new ResponseEntity<>(message,HttpStatus.CONFLICT);
+     }
+     return new ResponseEntity<>(message,HttpStatus.OK);
+    }
+
 }

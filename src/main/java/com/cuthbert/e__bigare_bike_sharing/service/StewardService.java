@@ -117,4 +117,67 @@ public class StewardService {
         return stewardRepository.findStewardByBikeTypeName(name);
     }
 
+    // D3: Add one bike type to a steward
+    public String addBikeTypeToSteward(UUID stewardId,UUID bikeTypeId){
+        Optional<Steward> steward=stewardRepository.findById(stewardId);
+
+        if(steward.isEmpty()){
+            return "The steward with that id does not exist";
+        }
+
+        Optional<BikeType> bikeType=bikeTypeRepository.findById(bikeTypeId);
+        if(bikeType.isEmpty()){
+            return "That bike type does not exist";
+        }
+
+        Steward thisSteward=steward.get();
+        BikeType thisBikeType=bikeType.get();
+
+        // I will check if the steward(thisSteward) already holds this bike type
+
+        for(BikeType bt: thisSteward.getBikeTypes()){
+            if(bt.getId().equals(bikeTypeId)){
+                return "The steward already has that bike type";
+            }
+
+        }
+
+        thisSteward.getBikeTypes().add(thisBikeType);
+        stewardRepository.save(thisSteward);
+
+        return "Bike type added to the steward";
+    }
+
+    // D4: Move a steward to another station
+
+    public String moveStewardToStation(UUID stewardId,int stationNumber){
+        Optional<Steward> steward=stewardRepository.findById(stewardId);
+
+        if(steward.isEmpty()){
+            return "The steward with that id does not exist";
+        }
+
+        Optional<Station> station=stationRepository.findByStationNumber(stationNumber);
+
+        if(station.isEmpty()){
+            return "The station with that stationNumber does not exist";
+        }
+
+        Station targetStation=station.get();
+        Steward targetSteward=steward.get();
+
+        // Check if the station is already occupied by another steward
+
+        if(stewardRepository.existsByStation(targetStation)){
+            if(targetSteward.getStation() ==  null || !targetSteward.getStation().getId().equals(targetStation.getId())){
+                return "That station is taken by another steward";
+            }
+        }
+
+        targetSteward.setStation(targetStation);
+        stewardRepository.save(targetSteward);
+
+        return "Station changed successfully";
+    }
+
 }

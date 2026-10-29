@@ -23,6 +23,15 @@ public class RideController {
     @PostMapping("/save")
     public ResponseEntity<String> save(@RequestBody Ride ride){
         String response=rideService.saveRide(ride);
+
+        // I updated here to meet the D requirements
+        if("Ride date cannot be in the past".equals(response)){
+
+            return new ResponseEntity<>(response,HttpStatus.BAD_REQUEST);
+        }
+        if("Steward already has a ride booked on that date".equals(response)){
+            return  new ResponseEntity<>(response,HttpStatus.CONFLICT);
+        }
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 
@@ -77,6 +86,20 @@ public class RideController {
 
         List<Ride> rides=rideService.getRidesBetweenDates(startDate,endDate);
         return new ResponseEntity<>(rides,HttpStatus.OK);
+    }
+
+    // D2: PATCH /api/rides/{id}/status?status=UNLOCKED and here I went for PATCH because we are updating only 1 column in the table
+    @PatchMapping("/{id}/status")
+    public ResponseEntity<String> updateStatus(@PathVariable UUID id,@RequestParam RideStatus status){
+        String message=rideService.updateRideStatus(id,status);
+
+        if("The ride with that id does not exist".equals(message)){
+            return new ResponseEntity<>(message,HttpStatus.NOT_FOUND);
+        }
+        if(message.startsWith("Cannot change status from")){
+            return new ResponseEntity<>(message,HttpStatus.BAD_REQUEST);
+        }
+        return new ResponseEntity<>(message,HttpStatus.OK);
     }
 
 

@@ -16,6 +16,7 @@ public interface StationRepository extends JpaRepository<Station, UUID> {
     @Query("SELECT s FROM Station s WHERE NOT EXISTS (SELECT st FROM Steward  st WHERE st.station=s) ORDER BY s.stationNumber ASC")
     List<Station> findFreeStations();
 
+
 }
 
 
