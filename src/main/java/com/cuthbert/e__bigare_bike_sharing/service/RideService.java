@@ -4,6 +4,7 @@ import com.cuthbert.e__bigare_bike_sharing.model.Ride;
 import com.cuthbert.e__bigare_bike_sharing.model.RideStatus;
 import com.cuthbert.e__bigare_bike_sharing.model.Rider;
 import com.cuthbert.e__bigare_bike_sharing.model.Steward;
+import com.cuthbert.e__bigare_bike_sharing.repository.RideChargeRepository;
 import com.cuthbert.e__bigare_bike_sharing.repository.RideRepository;
 import com.cuthbert.e__bigare_bike_sharing.repository.RiderRepository;
 import com.cuthbert.e__bigare_bike_sharing.repository.StewardRepository;
@@ -28,7 +29,8 @@ public class RideService {
     @Autowired
     private RiderRepository riderRepository;
 
-
+    @Autowired
+    private RideChargeRepository rideChargeRepository;
 
     // Now I will improve it to save saving ride as per D1:Safe saving
     public String saveRide(Ride ride){
@@ -103,14 +105,19 @@ public class RideService {
         return "Ride updated successfully";
     }
 
+    // I updated delete to meet the requirement E3
     public String deleteRide(UUID id){
         Optional<Ride> ride=rideRepository.findById(id);
 
         if(ride.isEmpty()){
             return "The ride with that id does not exist";
         }
-
-        rideRepository.delete(ride.get());
+            Ride thisRide=ride.get();
+        // E3: Check if ride has associated charges
+        if(rideChargeRepository.existsByRide(thisRide)){
+            return "That ride has ride charges, delete them first";
+        }
+        rideRepository.delete(thisRide);
         return "Ride deleted successfully";
     }
 

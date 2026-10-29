@@ -20,6 +20,8 @@ public class RideController {
     @Autowired
     private RideService rideService;
 
+
+
     @PostMapping("/save")
     public ResponseEntity<String> save(@RequestBody Ride ride){
         String response=rideService.saveRide(ride);
@@ -68,6 +70,10 @@ public class RideController {
         if ("The ride with that id does not exist".equals(response)) {
             return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
         }
+        if("That ride has ride charges, delete them first".equals(response)){
+            return new ResponseEntity<>(response,HttpStatus.CONFLICT);
+
+        }
         return new ResponseEntity<>(response,HttpStatus.OK);
     }
 
@@ -101,6 +107,8 @@ public class RideController {
         }
         return new ResponseEntity<>(message,HttpStatus.OK);
     }
+
+
 
 
 }
