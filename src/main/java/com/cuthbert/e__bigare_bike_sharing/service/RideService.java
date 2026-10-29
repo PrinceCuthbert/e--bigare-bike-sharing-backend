@@ -9,7 +9,10 @@ import com.cuthbert.e__bigare_bike_sharing.repository.RideRepository;
 import com.cuthbert.e__bigare_bike_sharing.repository.RiderRepository;
 import com.cuthbert.e__bigare_bike_sharing.repository.StewardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -155,6 +158,23 @@ public class RideService {
         realRide.setStatus(newStatus);
         rideRepository.save(realRide);
         return "Ride status updated successfully";
+    }
+
+    // F1: Get rides stats per status
+    public List<Object[]> getRidesStatsByStatus(){
+        return rideRepository.countRidesByStatus();
+    }
+
+    // F2: Steward is absent (Transactional bulk update)
+    @Transactional
+    public String cancelDayRides(UUID stewardId,LocalDate date){
+        int updatedCount=rideRepository.cancelRidesForStewardOnDate(stewardId,date);
+        return updatedCount+ " rides cancelled";
+    }
+
+    // Bonus paginated rides
+    public Page<Ride> getRidesPage(Pageable pageable){
+        return rideRepository.findAll(pageable);
     }
 
 

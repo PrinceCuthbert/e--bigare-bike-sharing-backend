@@ -447,7 +447,1964 @@
               ]
             }
           },
-          "response": []
+          "response": [
+            {
+              "name": "B3: Rides in a date range",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/rides/between?start=2026-10-01&end=2026-10-31",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "rides",
+                    "between"
+                  ],
+                  "query": [
+                    {
+                      "key": "start",
+                      "value": "2026-10-01"
+                    },
+                    {
+                      "key": "end",
+                      "value": "2026-10-31"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 28 Oct 2026 11:25:01 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n  {\n    \"destination\": \"Kimironko\",\n    \"durationMinutes\": 15,\n    \"id\": \"bdd2f00e-c39f-469d-875d-0b77eac2ca0e\",\n    \"rideDate\": \"2026-10-20\",\n    \"rider\": {\n      \"firstName\": \"Prince\",\n      \"id\": \"8100c6b8-8883-4fd9-8ecb-f0d7a07e0de0\",\n      \"lastName\": \"Ishimwe\",\n      \"phone\": \"0788444441\",\n      \"riderCode\": \"RD-0882\"\n    },\n    \"status\": \"ABORTED\",\n    \"steward\": {\n      \"bikeTypes\": [\n        {\n          \"name\": \"City Bike\",\n          \"id\": \"65b5d258-1c12-4d5a-9c04-7fecd7c45b29\"\n        },\n        {\n          \"name\": \"Electric Bike\",\n          \"id\": \"fe0eacab-bb80-4608-8632-72a9d6837606\"\n        }\n      ],\n      \"firstName\": \"Eric\",\n      \"id\": \"713046bb-3a10-492a-bcfa-42d13cd49302\",\n      \"lastName\": \"Mugisha\",\n      \"phone\": \"0788111111\",\n      \"station\": {\n        \"stationNumber\": 1,\n        \"name\": \"Kigali Heights\",\n        \"id\": \"27c48b0a-ffa4-4ee0-9994-28f72b328f99\"\n      }\n    }\n  },\n  {\n    \"destination\": \"Nyarutarama\",\n    \"durationMinutes\": 45,\n    \"id\": \"d6cd4fad-19f5-406f-9065-7791bb01e825\",\n    \"rideDate\": \"2026-10-20\",\n    \"rider\": {\n      \"firstName\": \"Prince\",\n      \"id\": \"8100c6b8-8883-4fd9-8ecb-f0d7a07e0de0\",\n      \"lastName\": \"Ishimwe\",\n      \"phone\": \"0788444441\",\n      \"riderCode\": \"RD-0882\"\n    },\n    \"status\": \"RETURNED\",\n    \"steward\": {\n      \"bikeTypes\": [\n        {\n          \"name\": \"City Bike\",\n          \"id\": \"65b5d258-1c12-4d5a-9c04-7fecd7c45b29\"\n        },\n        {\n          \"name\": \"Electric Bike\",\n          \"id\": \"fe0eacab-bb80-4608-8632-72a9d6837606\"\n        }\n      ],\n      \"firstName\": \"Eric\",\n      \"id\": \"713046bb-3a10-492a-bcfa-42d13cd49302\",\n      \"lastName\": \"Mugisha\",\n      \"phone\": \"0788111111\",\n      \"station\": {\n        \"stationNumber\": 1,\n        \"name\": \"Kigali Heights\",\n        \"id\": \"27c48b0a-ffa4-4ee0-9994-28f72b328f99\"\n      }\n    }\n  },\n  {\n    \"destination\": \"Gikondo\",\n    \"durationMinutes\": 30,\n    \"id\": \"f8692a90-104a-4375-b4fe-705debbf5acc\",\n    \"rideDate\": \"2026-10-25\",\n    \"rider\": {\n      \"firstName\": \"Prince\",\n      \"id\": \"8100c6b8-8883-4fd9-8ecb-f0d7a07e0de0\",\n      \"lastName\": \"Ishimwe\",\n      \"phone\": \"0788444441\",\n      \"riderCode\": \"RD-0882\"\n    },\n    \"status\": \"RETURNED\",\n    \"steward\": {\n      \"bikeTypes\": [],\n      \"firstName\": \"Jean\",\n      \"id\": \"8d722ce4-442d-44ee-b3c5-4f420b77a5da\",\n      \"lastName\": \"Hakizimana\",\n      \"phone\": \"0788222222\",\n      \"station\": {\n        \"stationNumber\": 2,\n        \"name\": \"Downtown CHICK\",\n        \"id\": \"474a1384-1994-4e62-9ee4-f72a113c1159\"\n      }\n    }\n  },\n  {\n    \"destination\": \"Kacyiru\",\n    \"durationMinutes\": 20,\n    \"id\": \"51293daa-c29a-4976-ace8-08c554db1b3f\",\n    \"rideDate\": \"2026-10-26\",\n    \"rider\": {\n      \"firstName\": \"Aline\",\n      \"id\": \"4591e6cc-325d-4153-b44c-ea3784096aaa\",\n      \"lastName\": \"Ishimwe\",\n      \"phone\": \"0788444442\",\n      \"riderCode\": \"RD-0883\"\n    },\n    \"status\": \"RESERVED\",\n    \"steward\": {\n      \"bikeTypes\": [],\n      \"firstName\": \"Jean\",\n      \"id\": \"8d722ce4-442d-44ee-b3c5-4f420b77a5da\",\n      \"lastName\": \"Hakizimana\",\n      \"phone\": \"0788222222\",\n      \"station\": {\n        \"stationNumber\": 2,\n        \"name\": \"Downtown CHICK\",\n        \"id\": \"474a1384-1994-4e62-9ee4-f72a113c1159\"\n      }\n    }\n  },\n  {\n    \"destination\": \"Kanombe\",\n    \"durationMinutes\": 40,\n    \"id\": \"376fff6d-7296-4f7d-9274-00826c03b576\",\n    \"rideDate\": \"2026-10-28\",\n    \"rider\": {\n      \"firstName\": \"Claude\",\n      \"id\": \"bd44662f-f011-4388-afcf-c0504835c201\",\n      \"lastName\": \"Murenzi\",\n      \"phone\": \"0788444443\",\n      \"riderCode\": \"RD-0884\"\n    },\n    \"status\": \"UNLOCKED\",\n    \"steward\": {\n      \"bikeTypes\": [],\n      \"firstName\": \"Patrick\",\n      \"id\": \"15403868-f00c-4691-9d51-1da9e14e65a4\",\n      \"lastName\": \"Gasana\",\n      \"phone\": \"0788333333\",\n      \"station\": {\n        \"stationNumber\": 3,\n        \"name\": \"Remera Giporoso\",\n        \"id\": \"e36edc54-cb54-4d7f-ba1b-a56d33991692\"\n      }\n    }\n  }\n]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "PART C",
+      "item": [
+        {
+          "name": "C1: Stewards by bike type",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/stewards/by-bike-type?name=city bike",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "stewards",
+                "by-bike-type"
+              ],
+              "query": [
+                {
+                  "key": "name",
+                  "value": "city bike"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "C1: Stewards by bike type",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/stewards/by-bike-type?name=city bike",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "stewards",
+                    "by-bike-type"
+                  ],
+                  "query": [
+                    {
+                      "key": "name",
+                      "value": "city bike"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 28 Oct 2026 13:39:56 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n  {\n    \"bikeTypes\": [\n      {\n        \"name\": \"City Bike\",\n        \"id\": \"65b5d258-1c12-4d5a-9c04-7fecd7c45b29\"\n      },\n      {\n        \"name\": \"Electric Bike\",\n        \"id\": \"fe0eacab-bb80-4608-8632-72a9d6837606\"\n      }\n    ],\n    \"firstName\": \"Eric\",\n    \"id\": \"713046bb-3a10-492a-bcfa-42d13cd49302\",\n    \"lastName\": \"Mugisha\",\n    \"phone\": \"0788111111\",\n    \"station\": {\n      \"stationNumber\": 1,\n      \"name\": \"Kigali Heights\",\n      \"id\": \"27c48b0a-ffa4-4ee0-9994-28f72b328f99\"\n    }\n  }\n]"
+            }
+          ]
+        },
+        {
+          "name": "C2: Free Stations(Station with no steward)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/stations/free",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "stations",
+                "free"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "C2: Free Stations(Station with no steward)",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/stations/free",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "stations",
+                    "free"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 28 Oct 2026 14:05:37 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n  {\n    \"stationNumber\": 4,\n    \"name\": \"Nyamirambo\",\n    \"id\": \"f78b5ba1-9678-4e41-b721-5bc3c6a55deb\"\n  }\n]"
+            }
+          ]
+        },
+        {
+          "name": "C3: Bike types nobody holds",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/bike-types/unused",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "bike-types",
+                "unused"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "C3: Bike types nobody holds",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/bike-types/unused",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "bike-types",
+                    "unused"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 28 Oct 2026 14:31:59 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n  {\n    \"name\": \"Mountain Bike\",\n    \"id\": \"6b8dbf1c-d448-4b68-854e-82eea5cd8cb2\"\n  }\n]"
+            }
+          ]
+        },
+        {
+          "name": "C4: Riders of a steward(Eric Mugisha)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/riders/of-steward/713046bb-3a10-492a-bcfa-42d13cd49302",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "riders",
+                "of-steward",
+                "713046bb-3a10-492a-bcfa-42d13cd49302"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "C4: Riders of a steward(Eric Mugisha)",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/riders/of-steward/713046bb-3a10-492a-bcfa-42d13cd49302",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "riders",
+                    "of-steward",
+                    "713046bb-3a10-492a-bcfa-42d13cd49302"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 28 Oct 2026 14:34:09 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n  {\n    \"firstName\": \"Prince\",\n    \"id\": \"8100c6b8-8883-4fd9-8ecb-f0d7a07e0de0\",\n    \"lastName\": \"Ishimwe\",\n    \"phone\": \"0788444441\",\n    \"riderCode\": \"RD-0882\"\n  },\n  {\n    \"firstName\": \"Diane\",\n    \"id\": \"8e997e5f-47b0-4575-8e84-d45883a3dfee\",\n    \"lastName\": \"Uwase\",\n    \"phone\": \"0788444444\",\n    \"riderCode\": \"RD-0885\"\n  },\n  {\n    \"firstName\": \"Claude\",\n    \"id\": \"bd44662f-f011-4388-afcf-c0504835c201\",\n    \"lastName\": \"Murenzi\",\n    \"phone\": \"0788444443\",\n    \"riderCode\": \"RD-0884\"\n  }\n]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "PART D",
+      "item": [
+        {
+          "name": "D2.1 (Valid Transition: RESERVED -> UNLOCKED) using Ride 4",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/rides/51293daa-c29a-4976-ace8-08c554db1b3f/status?status=UNLOCKED",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "rides",
+                "51293daa-c29a-4976-ace8-08c554db1b3f",
+                "status"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "UNLOCKED"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "D2.1 (Valid Transition: RESERVED -> UNLOCKED) using Ride 4",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/rides/51293daa-c29a-4976-ace8-08c554db1b3f/status?status=UNLOCKED",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "rides",
+                    "51293daa-c29a-4976-ace8-08c554db1b3f",
+                    "status"
+                  ],
+                  "query": [
+                    {
+                      "key": "status",
+                      "value": "UNLOCKED"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain;charset=UTF-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "32"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 29 Oct 2026 11:34:55 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "Ride status updated successfully"
+            }
+          ]
+        },
+        {
+          "name": "D2.2 (Illegal Transition: RETURNED -> RESERVED) using Ride 2",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/rides/d6cd4fad-19f5-406f-9065-7791bb01e825/status?status=RESERVED",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "rides",
+                "d6cd4fad-19f5-406f-9065-7791bb01e825",
+                "status"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "RESERVED"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "D2.2 (Illegal Transition: RETURNED -> RESERVED) using Ride 2",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/rides/d6cd4fad-19f5-406f-9065-7791bb01e825/status?status=RESERVED",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "rides",
+                    "d6cd4fad-19f5-406f-9065-7791bb01e825",
+                    "status"
+                  ],
+                  "query": [
+                    {
+                      "key": "status",
+                      "value": "RESERVED"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain;charset=UTF-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "46"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 29 Oct 2026 11:36:43 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                }
+              ],
+              "cookie": [],
+              "body": "Cannot change status from RETURNED to RESERVED"
+            }
+          ]
+        },
+        {
+          "name": "D2.3 (Unknown Ride ID)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/rides/00000000-0000-0000-0000-000000000000/status?status=UNLOCKED",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "rides",
+                "00000000-0000-0000-0000-000000000000",
+                "status"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "UNLOCKED"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "D2.3 (Unknown Ride ID)",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/rides/00000000-0000-0000-0000-000000000000/status?status=UNLOCKED",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "rides",
+                    "00000000-0000-0000-0000-000000000000",
+                    "status"
+                  ],
+                  "query": [
+                    {
+                      "key": "status",
+                      "value": "UNLOCKED"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain;charset=UTF-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "36"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 29 Oct 2026 11:37:52 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "The ride with that id does not exist"
+            }
+          ]
+        },
+        {
+          "name": "D1.1 Save rides in Past (Rejection)",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"rideDate\": \"2020-01-01\",\r\n  \"status\": \"RESERVED\",\r\n  \"destination\": \"Kigali Heights\",\r\n  \"durationMinutes\": 30,\r\n  \"rider\": { \"id\": \"8100c6b8-8883-4fd9-8ecb-f0d7a07e0de0\" },\r\n  \"steward\": { \"id\": \"713046bb-3a10-492a-bcfa-42d13cd49302\" }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/rides/save",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "rides",
+                "save"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "D1.1 Save rides in Past (Rejection)",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"rideDate\": \"2020-01-01\",\r\n  \"status\": \"RESERVED\",\r\n  \"destination\": \"Kigali Heights\",\r\n  \"durationMinutes\": 30,\r\n  \"rider\": { \"id\": \"8100c6b8-8883-4fd9-8ecb-f0d7a07e0de0\" },\r\n  \"steward\": { \"id\": \"713046bb-3a10-492a-bcfa-42d13cd49302\" }\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/rides/save",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "rides",
+                    "save"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain;charset=UTF-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "31"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 29 Oct 2026 11:40:09 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                }
+              ],
+              "cookie": [],
+              "body": "Ride date cannot be in the past"
+            }
+          ]
+        },
+        {
+          "name": "D1.2 (Steward Double Booking Rejection) try to double book Mugisha on same day",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"rideDate\": \"2026-11-02\",\r\n  \"status\": \"RESERVED\",\r\n  \"destination\": \"Gisozi\",\r\n  \"durationMinutes\": 25,\r\n  \"rider\": { \"id\": \"8100c6b8-8883-4fd9-8ecb-f0d7a07e0de0\" },\r\n  \"steward\": { \"id\": \"713046bb-3a10-492a-bcfa-42d13cd49302\" }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/rides/save",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "rides",
+                "save"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "D1.2 (Steward Double Booking Rejection) try to double book Mugisha on same day",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"rideDate\": \"2026-11-02\",\r\n  \"status\": \"RESERVED\",\r\n  \"destination\": \"Gisozi\",\r\n  \"durationMinutes\": 25,\r\n  \"rider\": { \"id\": \"8100c6b8-8883-4fd9-8ecb-f0d7a07e0de0\" },\r\n  \"steward\": { \"id\": \"713046bb-3a10-492a-bcfa-42d13cd49302\" }\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/rides/save",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "rides",
+                    "save"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain;charset=UTF-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "46"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 29 Oct 2026 11:46:31 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "Steward already has a ride booked on that date"
+            }
+          ]
+        },
+        {
+          "name": "D3.1 (Add Bike Type Successfully)-> Mountain Bike To Patrick Gasana",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/stewards/15403868-f00c-4691-9d51-1da9e14e65a4/bike-types/6b8dbf1c-d448-4b68-854e-82eea5cd8cb2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "stewards",
+                "15403868-f00c-4691-9d51-1da9e14e65a4",
+                "bike-types",
+                "6b8dbf1c-d448-4b68-854e-82eea5cd8cb2"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "D3.1 (Add Bike Type Successfully)-> Mountain Bike To Patrick Gasana",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/stewards/15403868-f00c-4691-9d51-1da9e14e65a4/bike-types/6b8dbf1c-d448-4b68-854e-82eea5cd8cb2",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "stewards",
+                    "15403868-f00c-4691-9d51-1da9e14e65a4",
+                    "bike-types",
+                    "6b8dbf1c-d448-4b68-854e-82eea5cd8cb2"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain;charset=UTF-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "30"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 29 Oct 2026 11:51:44 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "Bike type added to the steward"
+            }
+          ]
+        },
+        {
+          "name": "D3.2 (Duplicate Bike Type Rejection) -> Mountain Bike To Patrick Gasana again",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/stewards/15403868-f00c-4691-9d51-1da9e14e65a4/bike-types/6b8dbf1c-d448-4b68-854e-82eea5cd8cb2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "stewards",
+                "15403868-f00c-4691-9d51-1da9e14e65a4",
+                "bike-types",
+                "6b8dbf1c-d448-4b68-854e-82eea5cd8cb2"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "D3.2 (Duplicate Bike Type Rejection) -> Mountain Bike To Patrick Gasana again",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/stewards/15403868-f00c-4691-9d51-1da9e14e65a4/bike-types/6b8dbf1c-d448-4b68-854e-82eea5cd8cb2",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "stewards",
+                    "15403868-f00c-4691-9d51-1da9e14e65a4",
+                    "bike-types",
+                    "6b8dbf1c-d448-4b68-854e-82eea5cd8cb2"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain;charset=UTF-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "38"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 29 Oct 2026 11:53:30 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "The steward already has that bike type"
+            }
+          ]
+        },
+        {
+          "name": "D4.1 (Move Patrick Gasana to Free Station 4)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/stewards/15403868-f00c-4691-9d51-1da9e14e65a4/station?stationNumber=4",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "stewards",
+                "15403868-f00c-4691-9d51-1da9e14e65a4",
+                "station"
+              ],
+              "query": [
+                {
+                  "key": "stationNumber",
+                  "value": "4"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "D4.1 (Move Patrick Gasana to Free Station 4)",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/stewards/15403868-f00c-4691-9d51-1da9e14e65a4/station?stationNumber=4",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "stewards",
+                    "15403868-f00c-4691-9d51-1da9e14e65a4",
+                    "station"
+                  ],
+                  "query": [
+                    {
+                      "key": "stationNumber",
+                      "value": "4"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain;charset=UTF-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "28"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 29 Oct 2026 11:55:37 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "Station changed successfully"
+            }
+          ]
+        },
+        {
+          "name": "D4.2 (Station Taken Rejection)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/stewards/15403868-f00c-4691-9d51-1da9e14e65a4/station?stationNumber=1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "stewards",
+                "15403868-f00c-4691-9d51-1da9e14e65a4",
+                "station"
+              ],
+              "query": [
+                {
+                  "key": "stationNumber",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "D4.2 (Station Taken Rejection)",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/stewards/15403868-f00c-4691-9d51-1da9e14e65a4/station?stationNumber=1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "stewards",
+                    "15403868-f00c-4691-9d51-1da9e14e65a4",
+                    "station"
+                  ],
+                  "query": [
+                    {
+                      "key": "stationNumber",
+                      "value": "1"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain;charset=UTF-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "40"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 29 Oct 2026 11:56:44 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "That station is taken by another steward"
+            }
+          ]
+        },
+        {
+          "name": "D4.3 (Invalid Station Number",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/stewards/15403868-f00c-4691-9d51-1da9e14e65a4/station?stationNumber=99",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "stewards",
+                "15403868-f00c-4691-9d51-1da9e14e65a4",
+                "station"
+              ],
+              "query": [
+                {
+                  "key": "stationNumber",
+                  "value": "99"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "D4.3 (Invalid Station Number",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/stewards/15403868-f00c-4691-9d51-1da9e14e65a4/station?stationNumber=99",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "stewards",
+                    "15403868-f00c-4691-9d51-1da9e14e65a4",
+                    "station"
+                  ],
+                  "query": [
+                    {
+                      "key": "stationNumber",
+                      "value": "99"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain;charset=UTF-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "50"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 29 Oct 2026 11:57:53 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "The station with that stationNumber does not exist"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "PART E",
+      "item": [
+        {
+          "name": "E1.1 (Success: Save Charge on a RETURNED Ride)- Ride 2",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"chargeType\": \"Base fare\",\r\n  \"note\": \"First 30 minutes\",\r\n  \"amount\": 500\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/ride-charges/save?rideId=d6cd4fad-19f5-406f-9065-7791bb01e825",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "ride-charges",
+                "save"
+              ],
+              "query": [
+                {
+                  "key": "rideId",
+                  "value": "d6cd4fad-19f5-406f-9065-7791bb01e825"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "E1.1 (Success: Save Charge on a RETURNED Ride)- Ride 2",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"chargeType\": \"Base fare\",\r\n  \"note\": \"First 30 minutes\",\r\n  \"amount\": 500\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/ride-charges/save?rideId=d6cd4fad-19f5-406f-9065-7791bb01e825",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "ride-charges",
+                    "save"
+                  ],
+                  "query": [
+                    {
+                      "key": "rideId",
+                      "value": "d6cd4fad-19f5-406f-9065-7791bb01e825"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain;charset=UTF-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "30"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 29 Oct 2026 16:19:56 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "Ride charge saved successfully"
+            }
+          ]
+        },
+        {
+          "name": "E1.2 (Rejection: Attempt Charge on Non-RETURNED Ride) - Ride 4",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"chargeType\": \"Base fare\",\r\n  \"note\": \"First 30 minutes\",\r\n  \"amount\": 500\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/ride-charges/save?rideId=51293daa-c29a-4976-ace8-08c554db1b3f",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "ride-charges",
+                "save"
+              ],
+              "query": [
+                {
+                  "key": "rideId",
+                  "value": "51293daa-c29a-4976-ace8-08c554db1b3f"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "E1.2 (Rejection: Attempt Charge on Non-RETURNED Ride) - Ride 4",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"chargeType\": \"Base fare\",\r\n  \"note\": \"First 30 minutes\",\r\n  \"amount\": 500\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/ride-charges/save?rideId=51293daa-c29a-4976-ace8-08c554db1b3f",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "ride-charges",
+                    "save"
+                  ],
+                  "query": [
+                    {
+                      "key": "rideId",
+                      "value": "51293daa-c29a-4976-ace8-08c554db1b3f"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain;charset=UTF-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "40"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 29 Oct 2026 16:21:39 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                }
+              ],
+              "cookie": [],
+              "body": "Ride charges are only for RETURNED rides"
+            }
+          ]
+        },
+        {
+          "name": "E2 (Rider Charge History)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/ride-charges/rider/RD-0882",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "ride-charges",
+                "rider",
+                "RD-0882"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "E2 (Rider Charge History)",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/ride-charges/rider/RD-0882",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "ride-charges",
+                    "rider",
+                    "RD-0882"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 29 Oct 2026 16:23:49 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n  {\n    \"amount\": 500,\n    \"chargeType\": \"Base fare\",\n    \"chargedDate\": \"2026-10-29\",\n    \"id\": \"cc27c63a-f0fa-40d1-b998-0d6b3748d6af\",\n    \"note\": \"First 30 minutes\",\n    \"ride\": {\n      \"destination\": \"Nyarutarama\",\n      \"durationMinutes\": 45,\n      \"id\": \"d6cd4fad-19f5-406f-9065-7791bb01e825\",\n      \"rideDate\": \"2026-10-20\",\n      \"rider\": {\n        \"firstName\": \"Prince\",\n        \"id\": \"8100c6b8-8883-4fd9-8ecb-f0d7a07e0de0\",\n        \"lastName\": \"Ishimwe\",\n        \"phone\": \"0788444441\",\n        \"riderCode\": \"RD-0882\"\n      },\n      \"status\": \"RETURNED\",\n      \"steward\": {\n        \"bikeTypes\": [\n          {\n            \"name\": \"City Bike\",\n            \"id\": \"65b5d258-1c12-4d5a-9c04-7fecd7c45b29\"\n          },\n          {\n            \"name\": \"Electric Bike\",\n            \"id\": \"fe0eacab-bb80-4608-8632-72a9d6837606\"\n          }\n        ],\n        \"firstName\": \"Eric\",\n        \"id\": \"713046bb-3a10-492a-bcfa-42d13cd49302\",\n        \"lastName\": \"Mugisha\",\n        \"phone\": \"0788111111\",\n        \"station\": {\n          \"stationNumber\": 1,\n          \"name\": \"Kigali Heights\",\n          \"id\": \"27c48b0a-ffa4-4ee0-9994-28f72b328f99\"\n        }\n      }\n    }\n  }\n]"
+            }
+          ]
+        },
+        {
+          "name": "E3.1 (Protection: Attempt to Delete Ride 2 that has Charges)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/rides/delete/d6cd4fad-19f5-406f-9065-7791bb01e825",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "rides",
+                "delete",
+                "d6cd4fad-19f5-406f-9065-7791bb01e825"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "E3.1 (Protection: Attempt to Delete Ride 2 that has Charges)",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/rides/delete/d6cd4fad-19f5-406f-9065-7791bb01e825",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "rides",
+                    "delete",
+                    "d6cd4fad-19f5-406f-9065-7791bb01e825"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain;charset=UTF-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "45"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 29 Oct 2026 16:25:59 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "That ride has ride charges, delete them first"
+            }
+          ]
+        },
+        {
+          "name": "E3.2.1(Delete Charge, Then Successfully Delete Ride) - Delete Charge first",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/ride-charges/delete/cc27c63a-f0fa-40d1-b998-0d6b3748d6af",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "ride-charges",
+                "delete",
+                "cc27c63a-f0fa-40d1-b998-0d6b3748d6af"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "E3.2.1(Delete Charge, Then Successfully Delete Ride) - Delete Charge first",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/ride-charges/delete/cc27c63a-f0fa-40d1-b998-0d6b3748d6af",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "ride-charges",
+                    "delete",
+                    "cc27c63a-f0fa-40d1-b998-0d6b3748d6af"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain;charset=UTF-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "32"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 29 Oct 2026 16:32:08 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "Ride charge deleted successfully"
+            }
+          ]
+        },
+        {
+          "name": "E3.1.0 (Delete Ride 2 (Re-send E3.1))- Now it must works since we deleted its corresponding charges in E3.2.1",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/rides/delete/d6cd4fad-19f5-406f-9065-7791bb01e825",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "rides",
+                "delete",
+                "d6cd4fad-19f5-406f-9065-7791bb01e825"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "E3.1.0 (Delete Ride 2 (Re-send E3.1))- Now it must works since we deleted its corresponding charges in E3.2.1",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/rides/delete/d6cd4fad-19f5-406f-9065-7791bb01e825",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "rides",
+                    "delete",
+                    "d6cd4fad-19f5-406f-9065-7791bb01e825"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain;charset=UTF-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "25"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 29 Oct 2026 16:34:52 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "Ride deleted successfully"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "PART F",
+      "item": [
+        {
+          "name": "F1 : Ride Stats by Status",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/rides/stats/by-status",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "rides",
+                "stats",
+                "by-status"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "F1 : Ride Stats by Status",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/rides/stats/by-status",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "rides",
+                    "stats",
+                    "by-status"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 29 Oct 2026 20:36:37 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n  [\n    \"ABORTED\",\n    2\n  ],\n  [\n    \"RETURNED\",\n    2\n  ],\n  [\n    \"RESERVED\",\n    2\n  ],\n  [\n    \"UNLOCKED\",\n    3\n  ]\n]"
+            }
+          ]
+        },
+        {
+          "name": "F2 (Steward is Absent) - Steward 2 (Jean Hakizimana) is absent on 2026-11-05 where he has Ride 7 reserved",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/rides/cancel-day?stewardId=8d722ce4-442d-44ee-b3c5-4f420b77a5da&date=2026-11-05",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "rides",
+                "cancel-day"
+              ],
+              "query": [
+                {
+                  "key": "stewardId",
+                  "value": "8d722ce4-442d-44ee-b3c5-4f420b77a5da"
+                },
+                {
+                  "key": "date",
+                  "value": "2026-11-05"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "F2 (Steward is Absent) - Steward 2 (Jean Hakizimana) is absent on 2026-11-05 where he has Ride 7 reserved",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/rides/cancel-day?stewardId=8d722ce4-442d-44ee-b3c5-4f420b77a5da&date=2026-11-05",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "rides",
+                    "cancel-day"
+                  ],
+                  "query": [
+                    {
+                      "key": "stewardId",
+                      "value": "8d722ce4-442d-44ee-b3c5-4f420b77a5da"
+                    },
+                    {
+                      "key": "date",
+                      "value": "2026-11-05"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain;charset=UTF-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "17"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 29 Oct 2026 20:39:21 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "1 rides cancelled"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bonus",
+      "item": [
+        {
+          "name": "Bonus 1 (Dashboard Summary)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/dashboard/summary",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "dashboard",
+                "summary"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Bonus 1 (Dashboard Summary)",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/dashboard/summary",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "dashboard",
+                    "summary"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 29 Oct 2026 20:41:00 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"riders\": 5,\n  \"stewards\": 3,\n  \"freeStations\": 1,\n  \"ridesToday\": 0,\n  \"reserved\": 1,\n  \"rideCharges\": 0\n}"
+            }
+          ]
+        },
+        {
+          "name": "Bonus 2 (Rides Page by Page)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/rides/page?page=0&size=5&sort=rideDate,desc",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "rides",
+                "page"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "5"
+                },
+                {
+                  "key": "sort",
+                  "value": "rideDate,desc"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Bonus 2 (Rides Page by Page)",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/rides/page?page=0&size=5&sort=rideDate,desc",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "rides",
+                    "page"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "0"
+                    },
+                    {
+                      "key": "size",
+                      "value": "5"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "rideDate,desc"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 29 Oct 2026 20:41:58 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"content\": [\n    {\n      \"destination\": \"Nyamirambo\",\n      \"durationMinutes\": 10,\n      \"id\": \"9e5c7188-c32b-4230-9553-9629d083157b\",\n      \"rideDate\": \"2026-11-15\",\n      \"rider\": {\n        \"firstName\": \"Diane\",\n        \"id\": \"8e997e5f-47b0-4575-8e84-d45883a3dfee\",\n        \"lastName\": \"Uwase\",\n        \"phone\": \"0788444444\",\n        \"riderCode\": \"RD-0885\"\n      },\n      \"status\": \"ABORTED\",\n      \"steward\": {\n        \"bikeTypes\": [\n          {\n            \"name\": \"Cargo Bike\",\n            \"id\": \"783d6aaf-f3f9-4c31-87ed-17c8cdec24cb\"\n          }\n        ],\n        \"firstName\": \"Jean\",\n        \"id\": \"8d722ce4-442d-44ee-b3c5-4f420b77a5da\",\n        \"lastName\": \"Hakizimana\",\n        \"phone\": \"0788222222\",\n        \"station\": {\n          \"stationNumber\": 2,\n          \"name\": \"Downtown CHICK\",\n          \"id\": \"474a1384-1994-4e62-9ee4-f72a113c1159\"\n        }\n      }\n    },\n    {\n      \"destination\": \"Gisozi\",\n      \"durationMinutes\": 15,\n      \"id\": \"007d2999-d328-4d9a-bf71-b4eae3e62422\",\n      \"rideDate\": \"2026-11-12\",\n      \"rider\": {\n        \"firstName\": \"Claude\",\n        \"id\": \"bd44662f-f011-4388-afcf-c0504835c201\",\n        \"lastName\": \"Murenzi\",\n        \"phone\": \"0788444443\",\n        \"riderCode\": \"RD-0884\"\n      },\n      \"status\": \"RESERVED\",\n      \"steward\": {\n        \"bikeTypes\": [\n          {\n            \"name\": \"City Bike\",\n            \"id\": \"65b5d258-1c12-4d5a-9c04-7fecd7c45b29\"\n          },\n          {\n            \"name\": \"Electric Bike\",\n            \"id\": \"fe0eacab-bb80-4608-8632-72a9d6837606\"\n          }\n        ],\n        \"firstName\": \"Eric\",\n        \"id\": \"713046bb-3a10-492a-bcfa-42d13cd49302\",\n        \"lastName\": \"Mugisha\",\n        \"phone\": \"0788111111\",\n        \"station\": {\n          \"stationNumber\": 1,\n          \"name\": \"Kigali Heights\",\n          \"id\": \"27c48b0a-ffa4-4ee0-9994-28f72b328f99\"\n        }\n      }\n    },\n    {\n      \"destination\": \"Kiyovu\",\n      \"durationMinutes\": 50,\n      \"id\": \"18ac8f26-83c6-4b45-8275-8361c69c28fc\",\n      \"rideDate\": \"2026-11-10\",\n      \"rider\": {\n        \"firstName\": \"Aline\",\n        \"id\": \"4591e6cc-325d-4153-b44c-ea3784096aaa\",\n        \"lastName\": \"Ishimwe\",\n        \"phone\": \"0788444442\",\n        \"riderCode\": \"RD-0883\"\n      },\n      \"status\": \"UNLOCKED\",\n      \"steward\": {\n        \"bikeTypes\": [\n          {\n            \"name\": \"Mountain Bike\",\n            \"id\": \"6b8dbf1c-d448-4b68-854e-82eea5cd8cb2\"\n          }\n        ],\n        \"firstName\": \"Patrick\",\n        \"id\": \"15403868-f00c-4691-9d51-1da9e14e65a4\",\n        \"lastName\": \"Gasana\",\n        \"phone\": \"0788333333\",\n        \"station\": {\n          \"stationNumber\": 4,\n          \"name\": \"Nyamirambo\",\n          \"id\": \"f78b5ba1-9678-4e41-b721-5bc3c6a55deb\"\n        }\n      }\n    },\n    {\n      \"destination\": \"CBD\",\n      \"durationMinutes\": 35,\n      \"id\": \"28aed811-af91-4d68-9412-f2fd6430e577\",\n      \"rideDate\": \"2026-11-05\",\n      \"rider\": {\n        \"firstName\": \"Fabrice\",\n        \"id\": \"468ef6a3-450f-4556-bc3b-dc2163254743\",\n        \"lastName\": \"Kamanzi\",\n        \"phone\": \"0788444445\",\n        \"riderCode\": \"RD-0886\"\n      },\n      \"status\": \"ABORTED\",\n      \"steward\": {\n        \"bikeTypes\": [\n          {\n            \"name\": \"Cargo Bike\",\n            \"id\": \"783d6aaf-f3f9-4c31-87ed-17c8cdec24cb\"\n          }\n        ],\n        \"firstName\": \"Jean\",\n        \"id\": \"8d722ce4-442d-44ee-b3c5-4f420b77a5da\",\n        \"lastName\": \"Hakizimana\",\n        \"phone\": \"0788222222\",\n        \"station\": {\n          \"stationNumber\": 2,\n          \"name\": \"Downtown CHICK\",\n          \"id\": \"474a1384-1994-4e62-9ee4-f72a113c1159\"\n        }\n      }\n    },\n    {\n      \"destination\": \"Kicukiro\",\n      \"durationMinutes\": 25,\n      \"id\": \"1d2d23c9-5f2b-4cde-8625-47580107c343\",\n      \"rideDate\": \"2026-11-02\",\n      \"rider\": {\n        \"firstName\": \"Diane\",\n        \"id\": \"8e997e5f-47b0-4575-8e84-d45883a3dfee\",\n        \"lastName\": \"Uwase\",\n        \"phone\": \"0788444444\",\n        \"riderCode\": \"RD-0885\"\n      },\n      \"status\": \"RETURNED\",\n      \"steward\": {\n        \"bikeTypes\": [\n          {\n            \"name\": \"City Bike\",\n            \"id\": \"65b5d258-1c12-4d5a-9c04-7fecd7c45b29\"\n          },\n          {\n            \"name\": \"Electric Bike\",\n            \"id\": \"fe0eacab-bb80-4608-8632-72a9d6837606\"\n          }\n        ],\n        \"firstName\": \"Eric\",\n        \"id\": \"713046bb-3a10-492a-bcfa-42d13cd49302\",\n        \"lastName\": \"Mugisha\",\n        \"phone\": \"0788111111\",\n        \"station\": {\n          \"stationNumber\": 1,\n          \"name\": \"Kigali Heights\",\n          \"id\": \"27c48b0a-ffa4-4ee0-9994-28f72b328f99\"\n        }\n      }\n    }\n  ],\n  \"empty\": false,\n  \"first\": true,\n  \"last\": false,\n  \"number\": 0,\n  \"numberOfElements\": 5,\n  \"pageable\": {\n    \"offset\": 0,\n    \"pageNumber\": 0,\n    \"pageSize\": 5,\n    \"paged\": true,\n    \"sort\": {\n      \"empty\": false,\n      \"sorted\": true,\n      \"unsorted\": false\n    },\n    \"unpaged\": false\n  },\n  \"size\": 5,\n  \"sort\": {\n    \"empty\": false,\n    \"sorted\": true,\n    \"unsorted\": false\n  },\n  \"totalElements\": 9,\n  \"totalPages\": 2\n}"
+            }
+          ]
         }
       ]
     }

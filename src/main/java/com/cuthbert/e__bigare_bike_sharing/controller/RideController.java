@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
@@ -108,7 +109,40 @@ public class RideController {
         return new ResponseEntity<>(message,HttpStatus.OK);
     }
 
+    // F1: GET /api/rides/stats/by-status
+    @GetMapping("/stats/by-status")
+    public ResponseEntity<List<Object[]>> getStatsByStatus(){
+        return new ResponseEntity<>(rideService.getRidesStatsByStatus(),HttpStatus.OK);
+    }
+
+    // F2: PATCH /api/rides/cancel-day?stewardId=...&date=2026-10-20
+    @PatchMapping("/cancel-day")
+    public ResponseEntity<String> cancelDay(@RequestParam UUID stewardId, @RequestParam String date){
+        LocalDate rideDate=LocalDate.parse(date);
+        String message=rideService.cancelDayRides(stewardId,rideDate);
+        return new ResponseEntity<>(message,HttpStatus.OK);
+    }
 
 
+
+    // Bonus 2: GET /api/rides/page?page=0&size=5&sort=rideDate,desc
+    @GetMapping("/page")
+    public ResponseEntity<org.springframework.data.domain.Page<Ride>> getRidesPage(
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "5") int size,
+            @RequestParam(defaultValue = "rideDate,desc") String sort) {
+
+        String[] sortParts = sort.split(",");
+        String property = sortParts[0];
+        org.springframework.data.domain.Sort.Direction direction =
+                (sortParts.length > 1 && sortParts[1].equalsIgnoreCase("asc"))
+                        ? org.springframework.data.domain.Sort.Direction.ASC
+                        : org.springframework.data.domain.Sort.Direction.DESC;
+
+        org.springframework.data.domain.Pageable pageable =
+                org.springframework.data.domain.PageRequest.of(page, size, org.springframework.data.domain.Sort.by(direction, property));
+
+        return new ResponseEntity<>(rideService.getRidesPage(pageable), HttpStatus.OK);
+    }
 
 }
